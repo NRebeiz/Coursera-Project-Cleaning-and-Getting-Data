@@ -64,7 +64,8 @@ col_names <- names(mean_std_tidydata) %>%
                     "\\bGyroJerkMag" = "Gyroscope of Jerks Magnification ", "\\bBodyAccMean"= "Body Acceleration Mean",
                     "\\bBodyGyroMean" = "Body Gyroscope Mean", "\\bBodyGyroJerkMean"= "Body Gyropscope Jerks Mean",
                     "\\bBodyAccJerk\\b" = "Body Acceleration of Jerks ", "\\b,Gravity"= ", Gravity", "\\bBodyAccJerkMean"= "Body of Acceleration of Jerks Mean",
-                    "X\\b" = "X Axis", "Y\\b"= "Y Axis", "Z\\b" = "Z Axis"))
+                    "X\\b" = "X Axis", "Y\\b"= "Y Axis", "Z\\b" = "Z Axis", "\\bBodyAccMagMean"="Body Acceleration Magnification Mean",
+                    "\\bBodyAccMagstd"="Body Acceleration Magnification std"))
 
 colnames(mean_std_tidydata) = col_names
 ###5. from the data set in 4, create a second, independent tidy data set
