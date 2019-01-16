@@ -5,7 +5,7 @@ date: "January 15, 2019"
 output: html_document
 ---
 
-## Feature Selection of Raw Data: From Original Document#
+## Feature Selection of Raw Data: From Original Document
 
 ### From Feature_info.txt
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals 
@@ -59,8 +59,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 The complete list of variables of each feature vector is available in 'features.txt'
 
 ## Features of Tidy Data Set
-The variable names in the tidy data set are descriptive and are as follows:
-The tidy data set was organized by grouping subject number (30 levels) and activity (6 levels), resulting in 180 observations that were the average of the mean and std variables for each subject and activity. 
+The tidy data set was organized by grouping subject number (30 levels) and activity (6 levels), resulting in 180 observations that were the average of the mean and std variables for each subject and activity. The variable names in the tidy data set are descriptive and are as follows:
 
 ### Index variable names
  [1] "Subject.Number", factor variable, 30 levels, 1-30.                       
