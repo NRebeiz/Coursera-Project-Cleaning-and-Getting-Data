@@ -1,4 +1,4 @@
-#######run_Analytics.R for Programming assignment, Week 4, Cleaning and Getting Data####
+#######run_analysis.R for Programming assignment, Week 4, Cleaning and Getting Data####
 ###Purpose: creating tidy data from messy data
 ##files downloaded, unzipped and saved on laptop, working directory is set and all data is 
 #is in the working directory set by the user.
