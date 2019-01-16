@@ -42,7 +42,6 @@ sub_subject_activity <- full_data[, 1:2]
 mean_std_tidydata <- cbind(sub_subject_activity, sub_data)
 
 ####3. Uses descriptive activity names to name the activities in the dataset###########
-#in a different folder, will need to set path and getwd for different data
 activity <- read.table("activity_labels.txt", header = F, col.names = c("index", "activity"))
 #for the dataset returned above
 mean_std_tidydata[["Activity"]] <- factor(mean_std_tidydata[, "Activity"]
@@ -79,4 +78,3 @@ tidydata <- reshape2::dcast(data = tidydata, Subject.Number + Activity ~ variabl
 
 write.table(tidydata, file = "tidy_data.txt", row.names=F)
 summary(tidydata)
-summary(tidydata$)
