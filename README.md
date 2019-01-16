@@ -9,15 +9,41 @@ This project is for week 4 of Getting and Cleaning Data on Coursera. The purpose
 
 This repository contains the original data files including the README.txt file and codebook which is called "feature_info.txt".  This repo also contains the new README.md file for the project, a codebook called "codebook.md" that contains information on the variables in the tidy data set, a text file containing the tidy data set "tidy_data.txt", and the script to create the tidy data set "run_analysis.R".
 
-
 ## Peer Review criteria
 The project will be peer reviewed based on the following criteria:
 1. The submitted data set is tidy.
 2. The Github repo contains the required scripts.
-3. GitHub contains a code book that modifies and updates the available     codebooks with the data to indicate all the variables and summaries calculated, along with units, and any other relevant information.
+3. GitHub contains a code book that modifies and updates the available codebooks with the data to indicate all the variables and    summaries calculated, along with units, and any other relevant information.
 4. The README that explains the analysis files is clear and understandable.
 5. The work submitted for this project is the work of the student who submitted it.
-##Description of Raw Data Set, Collection and Experiments
+
+## Description of Project Requirements
+You should create one R script called run_analysis.R that does the following.
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set.
+4. Appropriately labels the data set with descriptive variable names.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+### Tidy Data Features of run_analysis.R Script
+*Requirement 1* The original data set was split into train and test, and this was merged into one data set called full_data. 
+
+*Requirement 2* The original 561 variables have been reduced to 75 variables that represent the mean and std for each variable analyzed. The subject number (separate text file) and activity (separate text file) were also merged with the full_data set and column headings were added from the feature text file.
+
+*Requirement 3* The descriptive activity names, such as Walking, Standing, were used in place of numerical variables. The descriptive activity is a character variable. 
+
+*Requirement 4* The variable names were changed to be more descriptive. For example, variable "tBodyACC-mean()X" was transformed to "Time of Body Acceleration mean()X Axis". The code replaces abbreviations in the original name, and adds connecting word "of", and adds "Axis" to make it clear that X is an axis direction. This makes the 75 variable names more readable and understandable when doing later analysis.  
+
+*Requirement 5* A second independent tidy data set was created from step 4,  named tidydata, and saved as a text file "tidy_data.txt".
+
+### Additional Notes              
+The original README.md file and codebook for raw data variables (features_info.txt) are availabe in the raw data file for the project. An updated codebook for the tidy data is included in this repository. 
+
+
+```{tidydata <-read.table(file="tidy_data.txt", header = TRUE)}
+summary(tidydata)
+```
+
+## Description of Raw Data Set, Collection and Experiments
 The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
 
 <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
@@ -95,34 +121,4 @@ Use of this dataset in publications must be acknowledged by referencing the foll
 This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
-
-### Additional Notes              
-The original README.md file and codebook for raw data variables (features_info.txt) are availabe in the raw data file for the project. An updated codebook for the tidy data is included in this repository. 
-
-
-## Description of Project Requirements
-You should create one R script called run_analysis.R that does the following.
-
-1. Merges the training and the test sets to create one data set_._
-2. Extracts only the measurements on the mean and standard deviation for each      measurement.
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names.
-5. From the data set in step 4, creates a second, independent tidy data set       with the average of each variable for each activity and each subject.
-### Tidy Data Features of run_analysis.R Script
-*Requirement 1* The original data set was split into train and test, and this was merged into one data set called full_data. 
-
-*Requirement 2* The original 561 variables have been reduced to 75 variables that represent the mean and std for each variable analyzed. The subject number (separate text file) and activity (separate text file) were also merged with the full_data set and column headings were added from the feature text file.
-
-*Requirement 3* The descriptive activity names, such as Walking, Standing, were used in place of numerical variables. The descriptive activity is a character variable. 
-
-*Requirement 4* The variable names were changed to be more descriptive. For example, variable "tBodyACC-mean()X" was transformed to "Time of Body Acceleration mean()X Axis". The code replaces abbreviations in the original name, and adds connecting word "of", and adds "Axis" to make it clear that X is an axis direction. This makes the 75 variable names more readable and understandable when doing later analysis.  
-
-*Requirement 5* A second independent tidy data set was created from step 4,  named tidydata, and saved as a text file "tidy_data.txt".
-
-
-
-
-```{tidydata <-read.table(file="tidy_data.txt", header = TRUE)}
-summary(tidydata)
-```
 
